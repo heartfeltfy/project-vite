@@ -4,7 +4,7 @@ export const base: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
-    component: async () => await import('@/views/HomeView.vue')
+    component: async () => await import('@/views/home/HomeView.vue')
   },
   {
     path: '/about',

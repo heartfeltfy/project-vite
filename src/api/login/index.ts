@@ -1,14 +1,14 @@
 import http from '@/utils/http'
 
 interface IParams {
-  page: number,
-  tab: string,
+  page: number
+  tab: string
   limit: number
 }
 
 interface IDataType {
-  title: string,
-  tab: string,
+  title: string
+  tab: string
   content: string
 }
 

@@ -5,6 +5,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
+// import eslintPlugin from 'vite-plugin-eslint'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -27,7 +29,8 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
       // 生成配置文件路径
       dts: 'src/components.d.ts'
-    })],
+    })
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')

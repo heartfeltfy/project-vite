@@ -15,5 +15,7 @@ const router = createRouter({
     }
   }
 })
-
+router.beforeEach((to, form, next) => {
+  next()
+})
 export default router

@@ -1,0 +1,13 @@
+## OS
+.idea
+pnpm-lock.yaml
+.vscode
+
+# Ignored suffix
+*.md
+*.svg
+*ignore
+
+
+## Built-files
+dist
