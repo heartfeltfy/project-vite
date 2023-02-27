@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router"
 
-import { base } from './modules/base'
+import { base } from "./modules/base"
 
 const routes = [...base]
 
@@ -9,13 +9,10 @@ const router = createRouter({
   routes,
   scrollBehavior() {
     return {
-      el: '#app',
+      el: "#app",
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth"
     }
   }
-})
-router.beforeEach((to, form, next) => {
-  next()
 })
 export default router

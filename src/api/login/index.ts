@@ -1,4 +1,4 @@
-import http from '@/utils/http'
+import http from "@/utils/http"
 
 interface IParams {
   page: number
@@ -14,7 +14,7 @@ interface IDataType {
 
 export default class User {
   static async getUserInfo(data: IParams) {
-    return http.get<IResponse<IDataType[]>>('/topics', {
+    return http.get<IResponse<IDataType[]>>("/topics", {
       params: data
     })
   }

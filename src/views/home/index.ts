@@ -11,6 +11,6 @@ export class Message {
    * 获取描述信息
    */
   getContent(): string {
-    return this.tab + '-' + this.title
+    return this.tab + "-" + this.title
   }
 }
