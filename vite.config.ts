@@ -42,7 +42,7 @@ export default defineConfig({
     }),
     Components({
       // 需要自动按需引入的文件夹组件
-      dirs: ["src/components"],
+      dirs: ["src/components", "src/layout/components"],
       resolvers: [ElementPlusResolver(), NaiveUiResolver()],
       // 生成配置文件路径
       dts: "src/components.d.ts"
