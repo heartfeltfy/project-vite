@@ -12,8 +12,8 @@
         </el-scrollbar>
       </aside>
       <section>
-        <div>
-          <p v-for="i in 1" :key="i">内容显示区域</p>
+        <div class="tiger-section">
+          <p v-for="i in 100" :key="i">内容显示区域</p>
         </div>
       </section>
     </main>
@@ -38,23 +38,6 @@
     box-sizing: border-box;
   }
 
-  @media screen and (min-width: 768px) {
-    header {
-      padding: 0 12px 0 32px;
-    }
-  }
-  @media screen and (min-width: 960px) {
-    header {
-      width: 100%;
-    }
-  }
-  @media screen and (min-width: 1280px) {
-    header {
-      padding: 0 32px;
-    }
-  }
-
-
   main {
     overflow-y: auto;
 
@@ -69,50 +52,128 @@
       width: calc((100vw - var(--screen-max-width)) / 2 + var(--sidebar-width-small));
     }
 
-    @media screen and (min-width: 768px) {
+    section {
+      padding-top: var(--header-height);
+
+      .tiger-section {
+        padding: 32px 24px 96px;
+      }
+    }
+  }
+}
+
+/* 媒介查询适配 */
+/* 适配768px */
+@media screen and (min-width: 768px) {
+  .tiger-layout {
+    header {
+      padding: 0 12px 0 32px;
+    }
+
+    main {
       aside {
         width: var(--sidebar-width-small);
       }
-    }
-    @media screen and (max-width: 960px) {
-      aside {
-        display: none;
-      }
-    }
-    @media screen and (min-width: 1440px) {
-      aside {
-        padding: 48px 48px 96px calc((100vw - var(--screen-max-width)) / 2);
-        width: calc((100vw - var(--screen-max-width)) / 2 + var(--sidebar-width-small));
-      }
-    }
-    @media screen and (min-width: 1680px) {
-      aside {
-        padding: 48px 32px 96px calc((100vw - var(--screen-max-width)) / 2);
-        width: calc((100vw - var(--screen-max-width)) / 2 + var(--sidebar-width-small));
-      }
-    }
 
-    section {
-      padding-top: var(--header-height);
+      section {
+        .tiger-section {
+          padding: 48px 32px 42px;
+        }
+      }
     }
+  }
+}
 
-    @media screen and (min-width: 960px) {
+/* 适配960px */
+@media screen and (min-width: 960px) {
+  .tiger-layout {
+    main {
       section {
         padding-left: calc(var(--sidebar-width-sm) + 10px);
+
+        .tiger-section {
+          padding: 64px 64px 42px;
+        }
       }
     }
-    @media screen and (min-width: 960px) and (min-width: 1280px) {
+  }
+}
+
+/* 适配1280px */
+@media screen and (min-width: 1280px) {
+  .tiger-layout {
+    header {
+      padding: 0 32px;
+    }
+  }
+}
+
+/* 适配960px至1280px */
+@media screen and (min-width: 960px) and (min-width: 1280px) {
+  .tiger-layout {
+    main {
       section {
         padding-left: calc(var(--sidebar-width-small));
       }
     }
-    @media screen and (min-width: 960px) and (min-width: 1440px) {
+  }
+}
+
+/* 适配1440px */
+@media screen and (min-width: 1440px) {
+  .tiger-layout {
+    main {
+      aside {
+        padding: 48px 48px 96px calc((100vw - var(--screen-max-width)) / 2);
+        width: calc((100vw - var(--screen-max-width)) / 2 + var(--sidebar-width-small));
+      }
+
+      section {
+        .tiger-section {
+          padding: 64px 0 42px 64px;
+        }
+      }
+    }
+  }
+}
+
+/* 适配960px至1440px */
+@media screen and (min-width: 960px) and (min-width: 1440px) {
+  .tiger-layout {
+    main {
       section {
         padding-left: calc((100vw - var(--screen-max-width)) / 2 + var(--sidebar-width-small));
       }
     }
+  }
+}
 
+/* 适配1680px */
+@media screen and (min-width: 1680px) {
+  .tiger-layout {
+    main {
+      aside {
+        padding: 48px 32px 96px calc((100vw - var(--screen-max-width)) / 2);
+        width: calc((100vw - var(--screen-max-width)) / 2 + var(--sidebar-width-small));
+      }
 
+      section {
+        .tiger-section {
+          padding: 64px 0 42px 96px;
+        }
+      }
+    }
+  }
+}
+
+/* 适配小于960px时的操作 */
+@media screen and (max-width: 960px) {
+  .tiger-layout {
+    main {
+      aside {
+        display: none;
+      }
+    }
   }
 }
 </style>
