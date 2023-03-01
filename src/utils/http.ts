@@ -1,9 +1,9 @@
-import axios, { AxiosResponse, InternalAxiosRequestConfig } from 'axios'
+import axios, { AxiosResponse, InternalAxiosRequestConfig } from "axios"
 
 /**
  * baseUrl 公共地址
  */
-const baseURL = 'https://cnodejs.org/api/v1'
+const baseURL = "https://cnodejs.org/api/v1"
 
 /**
  * 创建请求实例
@@ -20,32 +20,31 @@ const instance = axios.create({
  */
 
 instance.interceptors.request.use(
-    (config: InternalAxiosRequestConfig) => {
-      return config
-    },
-    async (error) => {
-      return await Promise.reject(error)
-    }
+  (config: InternalAxiosRequestConfig) => {
+    return config
+  },
+  async (error) => {
+    return await Promise.reject(error)
+  }
 )
-
 
 /**
  * 相应拦截器（获取到响应时的拦截）
  */
 
 instance.interceptors.response.use(
-    async (response: AxiosResponse) => {
-      return await Promise.resolve(response.data)
-    },
-    async (error) => {
-      const { response } = error
-      if (response && response.data) {
-        return await Promise.reject(error)
-      }
-
-      const { message } = error
-      console.error(message)
+  async (response: AxiosResponse) => {
+    return await Promise.resolve(response.data)
+  },
+  async (error) => {
+    const { response } = error
+    if (response && response.data) {
       return await Promise.reject(error)
     }
+
+    const { message } = error
+    console.error(message)
+    return await Promise.reject(error)
+  }
 )
 export default instance
