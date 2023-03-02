@@ -13,7 +13,7 @@
       </aside>
       <section>
         <div class="tiger-section">
-          <p v-for="i in 100" :key="i">内容显示区域</p>
+          <p v-for="i in 1" :key="i">内容显示区域</p>
         </div>
       </section>
     </main>
@@ -22,10 +22,8 @@
 
 <style lang="scss" scoped>
 .tiger-layout {
-
   header {
     height: var(--header-height);
-    flex-shrink: 0;
     border-bottom: 1px solid var(--header-border);
     padding: 0 12px 0 24px;
     background: radial-gradient(transparent 1px, var(--bg-color) 1px);
