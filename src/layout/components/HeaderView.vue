@@ -4,9 +4,9 @@
   <div class="header-container">
     <div class="tiger-logo">
       <a href="/main">
-        <img alt="tiger" src="tiger.svg" title="tiger" />
+        <img alt="tiger" src="@/assets/img/tiger.png" title="tiger" />
+        <span>Tiger</span>
       </a>
-      <span>Tiger</span>
     </div>
     <div class="tiger-github">
       <a class="github-logo" href="https://github.com/cmf-chenmf/project-vite" target="_blank" title="github">
@@ -33,6 +33,7 @@
     display: flex;
     align-items: center;
     height: var(--header-height);
+    cursor: pointer;
 
     a {
       height: 32px;
@@ -40,11 +41,15 @@
 
     img {
       height: 100%;
+      vertical-align: top;
     }
 
     span {
+      display: inline-block;
+      line-height: 32px;
       font-size: 24px;
       padding-left: 8px;
+      color: #303133;
     }
   }
 
