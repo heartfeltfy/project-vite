@@ -1,5 +1,5 @@
-<script lang='ts' setup>
-import { useRouter } from 'vue-router'
+<script lang="ts" setup>
+import { useRouter } from "vue-router"
 
 const router = useRouter()
 /**
@@ -16,7 +16,7 @@ const jump = () => {
 }
 </script>
 <template>
-  <div class='template' @click='jump'>Template</div>
+  <div class="template" @click="jump">Template</div>
 </template>
 
-<style lang='scss' scoped></style>
+<style lang="scss" scoped></style>

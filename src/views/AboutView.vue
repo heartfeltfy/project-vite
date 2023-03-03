@@ -40,7 +40,7 @@ console.log(list)
 </script>
 
 <template>
-  <div class="template">
+  <div class="tiger-about">
     AboutView
   </div>
 </template>

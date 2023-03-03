@@ -1,5 +1,5 @@
 <template>
-  <div class='template'>NotFound</div>
+  <div class="tiger-notfound">NotFound</div>
 </template>
 
-<style lang='scss' scoped></style>
+<style lang="scss" scoped></style>
