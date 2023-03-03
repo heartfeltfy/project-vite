@@ -6,6 +6,12 @@ html, body, #app {
   box-sizing: border-box;
 }
 
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+  background-color: transparent;
+}
+
 /* 滚动条轨道样式 */
 ::-webkit-scrollbar {
   width: 6px;

@@ -4,7 +4,14 @@ export const base: RouteRecordRaw[] = [
   {
     path: "/",
     name: "layout",
-    component: async () => await import("@/layout/IndexView.vue")
+    redirect: "/main",
+    children: [
+      {
+        path: "/main",
+        name: "main",
+        component: async () => await import("@/layout/IndexView.vue")
+      }
+    ]
   },
   {
     path: "/about",

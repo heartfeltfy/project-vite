@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from "vue-router"
 
 import { base } from "./modules/base"
 
+/**
+ * 导入路由信息表
+ */
 const routes = [...base]
 
 const router = createRouter({

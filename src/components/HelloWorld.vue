@@ -7,12 +7,12 @@ const router = useRouter()
  */
 const jump = () => {
   const routeUrl = router.resolve({
-    path: '/about',
+    path: "/about",
     query: {
       id: 123123
     }
   })
-  window.open(routeUrl.href, '_blank')
+  window.open(routeUrl.href, "_blank")
 }
 </script>
 <template>
