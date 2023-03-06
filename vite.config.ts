@@ -9,6 +9,7 @@ import { ElementPlusResolver, NaiveUiResolver } from "unplugin-vue-components/re
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/project-vite/",
   build: {
     outDir: "docs",
     // 设置最终构建的浏览器兼容目标
@@ -53,7 +54,6 @@ export default defineConfig({
       "@": resolve(__dirname, "src")
     }
   },
-  base: "./",
   server: {
     // 是否开启 https
     https: false,
