@@ -10,7 +10,7 @@ import { ElementPlusResolver, NaiveUiResolver } from "unplugin-vue-components/re
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: "dist",
+    outDir: "docs",
     // 设置最终构建的浏览器兼容目标
     target: "es2015",
     // 构建后是否生成 source map 文件
