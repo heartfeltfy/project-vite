@@ -44,12 +44,16 @@
 
   .aside {
     position: fixed;
-    top: var(--header-height);
+    top: 0;
     bottom: 0;
     left: 0;
     padding: 48px 32px 0;
     width: calc((100vw - var(--screen-max-width)) / 2 + var(--sidebar-width-small));
     overflow-y: auto;
+    transform: translate(-100%);
+    transition: background-color .3s, opacity .25s, transform .5s cubic-bezier(.19, 1, .22, 1);
+    background: var(--bg-color);
+    z-index: var(--z-index-sidebar);
 
     .tiger-aside-scrollbar {
       height: 100%;
@@ -108,6 +112,11 @@
 /* 适配960px */
 @media screen and (min-width: 960px) {
   .tiger-layout {
+    .aside {
+      top: var(--header-height);
+      transform: translate(0);
+    }
+
     section {
       padding-left: calc(var(--sidebar-width-sm) + 10px);
 
@@ -187,15 +196,6 @@
           display: block;
         }
       }
-    }
-  }
-}
-
-/* 适配小于960px时的操作 */
-@media screen and (max-width: 960px) {
-  .tiger-layout {
-    .aside {
-      display: none;
     }
   }
 }

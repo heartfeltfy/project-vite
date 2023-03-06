@@ -9,7 +9,8 @@ import { ElementPlusResolver, NaiveUiResolver } from "unplugin-vue-components/re
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/project-vite/",
+  // base: "/project-vite/",
+  base: "./",
   build: {
     outDir: "docs",
     // 设置最终构建的浏览器兼容目标
