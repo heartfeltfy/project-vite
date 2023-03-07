@@ -2,14 +2,24 @@
 
 <template>
   <div class="tiger-layout">
+    <!-- 遮罩层 -->
+    <transition name="overlay">
+      <OverlayView />
+    </transition>
     <header>
       <HeaderView />
     </header>
+    <!-- 菜单开关 -->
+    <div class="valve">
+      <ValveView />
+    </div>
+    <!-- 坐标菜单滚动 -->
     <el-scrollbar class="aside">
       <div class="tiger-aside-scrollbar">
         <AsideView />
       </div>
     </el-scrollbar>
+    <!-- 主内容区 -->
     <section>
       <div class="tiger-section">
         <div class="tiger-section-container">
@@ -37,7 +47,6 @@
     top: 0;
     left: 0;
     position: sticky;
-    z-index: var(--nav-z-index);
     box-sizing: border-box;
   }
 
@@ -55,14 +64,25 @@
     background: var(--bg-color);
     z-index: var(--z-index-sidebar);
 
-    .tiger-aside-scrollbar {
-      height: 100%;
-      padding-bottom: 5em;
+    :deep(.el-scrollbar__wrap) {
+      border: 1px solid var(--header-border);
+
+      .tiger-aside-scrollbar {
+        height: 100%;
+        padding-bottom: 5em;
+      }
     }
+
+  }
+
+  .valve {
+    display: flex;
+    padding: 0.75em 32px;
+    border: 1px solid var(--header-border);
+    border-top: none;
   }
 
   section {
-    padding-top: var(--header-height);
 
     .tiger-section {
       padding: 32px 24px 96px;
@@ -87,116 +107,20 @@
       }
     }
   }
-}
 
-/* 媒介查询适配 */
-/* 适配768px */
-@media screen and (min-width: 768px) {
-  .tiger-layout {
-    header {
-      padding: 0 12px 0 32px;
-    }
+  .overlay-enter-active,
+  .overlay-leave-active {
+    transition: opacity 10s ease;
+  }
 
-    .aside {
-      width: var(--sidebar-width-small);
-    }
-
-    section {
-      .tiger-section {
-        padding: 48px 32px 42px;
-      }
-    }
+  .overlay-enter-from,
+  .overlay-leave-to {
+    opacity: 0;
   }
 }
 
-/* 适配960px */
-@media screen and (min-width: 960px) {
-  .tiger-layout {
-    .aside {
-      top: var(--header-height);
-      transform: translate(0);
-    }
-
-    section {
-      padding-left: calc(var(--sidebar-width-sm) + 10px);
-
-      .tiger-section {
-        padding: 64px 64px 42px;
-      }
-    }
-  }
-}
-
-/* 适配1280px */
-@media screen and (min-width: 1280px) {
-  .tiger-layout {
-    header {
-      padding: 0 32px;
-    }
-  }
-}
-
-/* 适配960px至1280px */
-@media screen and (min-width: 960px) and (min-width: 1280px) {
-  .tiger-layout {
-    section {
-      padding-left: calc(var(--sidebar-width-small));
-    }
-  }
-}
-
-/* 适配1440px */
-@media screen and (min-width: 1440px) {
-  .tiger-layout {
-    .aside {
-      padding: 48px 32px 96px calc((100vw - var(--screen-max-width)) / 2);
-      width: calc((100vw - var(--screen-max-width)) / 2 + var(--sidebar-width-small));
-    }
-
-    section {
-      .tiger-section {
-        padding: 64px 0 42px 64px;
-        display: flex;
-
-        .tiger-section-container {
-          width: var(--section-width)
-        }
-
-        .tiger-section-wrapper {
-          display: block;
-        }
-      }
-    }
-  }
-}
-
-/* 适配960px至1440px */
-@media screen and (min-width: 960px) and (min-width: 1440px) {
-  .tiger-layout {
-    section {
-      padding-left: calc((100vw - var(--screen-max-width)) / 2 + var(--sidebar-width-small));
-    }
-  }
-}
-
-/* 适配1680px */
-@media screen and (min-width: 1680px) {
-  .tiger-layout {
-    .aside {
-      padding: 48px 48px 96px calc((100vw - var(--screen-max-width)) / 2);
-      width: calc((100vw - var(--screen-max-width)) / 2 + var(--sidebar-width-small));
-    }
-
-    section {
-      .tiger-section {
-        padding: 64px 0 42px 96px;
-        display: flex;
-
-        .tiger-section-wrapper {
-          display: block;
-        }
-      }
-    }
-  }
-}
+/*
+  适配样式引入
+ */
+@import "media.scss";
 </style>
