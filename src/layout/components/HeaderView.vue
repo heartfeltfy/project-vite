@@ -59,6 +59,7 @@
 
     .github-logo {
       font-size: 24px;
+      height: 24px;
       color: #303133;
 
       .github-chenmf {
