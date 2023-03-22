@@ -1,7 +1,6 @@
 ## OS
 .idea
 pnpm-lock.yaml
-.vscode
 
 # Ignored suffix
 *.md
@@ -10,4 +9,4 @@ pnpm-lock.yaml
 
 
 ## Built-files
-dist
+docs

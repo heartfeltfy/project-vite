@@ -110,7 +110,7 @@
 
   .overlay-enter-active,
   .overlay-leave-active {
-    transition: opacity 10s ease;
+    transition: opacity var(--transition-delay) ease;
   }
 
   .overlay-enter-from,

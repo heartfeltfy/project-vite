@@ -16,15 +16,10 @@ const getUserInfo = async () => {
 }
 getUserInfo()
 
-const list = reactive<any[]>([
-  { status: 1 },
-  { status: 2 },
-  { status: 4 },
-  { status: 5 }
-])
+const list = reactive<any[]>([{ status: 1 }, { status: 2 }, { status: 4 }, { status: 5 }])
 
 interface IEncode {
-  [index: string]: any;
+  [index: string]: any
 }
 
 const encode: IEncode = {
@@ -40,9 +35,7 @@ console.log(list)
 </script>
 
 <template>
-  <div class="tiger-about">
-    AboutView
-  </div>
+  <div class="tiger-about">AboutView</div>
 </template>
 
 <style lang="scss" scoped></style>

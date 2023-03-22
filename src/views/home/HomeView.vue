@@ -19,8 +19,8 @@ const getUserInfo = async () => {
   }
 }
 getUserInfo()
-
 </script>
+
 <template>
   <div class="tiger-home">HomeView</div>
 </template>
