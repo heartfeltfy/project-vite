@@ -11,8 +11,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, .6);
-  transition: opacity .5s;
+  background: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.5s;
   z-index: var(--z-index-shade);
 }
 </style>

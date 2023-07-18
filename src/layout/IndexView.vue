@@ -7,7 +7,7 @@
       <OverlayView />
     </transition>
     <header>
-      <HeaderView />
+      <HeaderView :data="{ name: '哈哈ceshi' }" />
     </header>
     <!-- 菜单开关 -->
     <div class="valve">
@@ -22,13 +22,9 @@
     <!-- 主内容区 -->
     <section>
       <div class="tiger-section">
-        <div class="tiger-section-container">
-          tiger-section-container
-        </div>
+        <div class="tiger-section-container">tiger-section-container</div>
         <div class="tiger-section-wrapper">
-          <nav class="wrapper-content">
-            wrapper-content
-          </nav>
+          <nav class="wrapper-content">wrapper-content</nav>
         </div>
       </div>
     </section>
@@ -50,7 +46,6 @@
     box-sizing: border-box;
   }
 
-
   .aside {
     position: fixed;
     top: 0;
@@ -60,7 +55,7 @@
     width: calc((100vw - var(--screen-max-width)) / 2 + var(--sidebar-width-small));
     overflow-y: auto;
     transform: translate(-100%);
-    transition: background-color .3s, opacity .25s, transform .5s cubic-bezier(.19, 1, .22, 1);
+    transition: background-color 0.3s, opacity 0.25s, transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     background: var(--bg-color);
     z-index: var(--z-index-sidebar);
 
@@ -72,7 +67,6 @@
         padding-bottom: 5em;
       }
     }
-
   }
 
   .valve {
@@ -83,7 +77,6 @@
   }
 
   section {
-
     .tiger-section {
       padding: 32px 24px 96px;
 

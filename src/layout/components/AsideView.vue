@@ -2,7 +2,7 @@
 
 <template>
   <div class="tiger-aside">
-    <p v-for="i in 40">tiger-aside</p>
+    <p v-for="i in 40" :key="i">tiger-aside</p>
   </div>
 </template>
 
