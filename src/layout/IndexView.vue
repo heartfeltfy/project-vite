@@ -7,7 +7,7 @@
       <OverlayView />
     </transition>
     <header>
-      <HeaderView :data="{ name: '哈哈' }" />
+      <HeaderView :data="{ name: '哈哈ceshi' }" />
     </header>
     <!-- 菜单开关 -->
     <div class="valve">
