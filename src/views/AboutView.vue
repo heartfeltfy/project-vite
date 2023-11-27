@@ -16,7 +16,10 @@ const getUserInfo = async () => {
 }
 getUserInfo()
 
-const list = reactive<any[]>([{ status: 1 }, { status: 2 }, { status: 4 }, { status: 5 }])
+const list = ref<{
+  status: number,
+  statusName?: string
+}[]>([{ status: 1 }, { status: 2 }, { status: 4 }, { status: 5 }])
 
 interface IEncode {
   [index: string]: any
@@ -28,10 +31,10 @@ const encode: IEncode = {
   4: "庭审结束",
   5: "休庭"
 }
-list.forEach((value) => {
+list.value.forEach((value) => {
   value.statusName = encode[value.status]
 })
-console.log(list)
+console.log(list.value)
 </script>
 
 <template>
