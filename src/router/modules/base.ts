@@ -4,12 +4,12 @@ export const base: RouteRecordRaw[] = [
   {
     path: "/",
     name: "layout",
-    component: async () => await import("@/layout/IndexView.vue")
+    component: async () => await import("@/layout/AppLayout.vue")
   },
   // 将匹配所有内容并将其放在 `$route.params.pathMatch` 下
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
-    component: async () => await import("@/views/NotFound.vue")
+    component: async () => await import("@/views/error/index.vue")
   }
 ]
