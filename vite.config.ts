@@ -3,14 +3,13 @@ import vue from "@vitejs/plugin-vue"
 import { resolve } from "path"
 import AutoImport from "unplugin-auto-import/vite"
 import Components from "unplugin-vue-components/vite"
-import { ElementPlusResolver, NaiveUiResolver } from "unplugin-vue-components/resolvers"
 
 // import eslintPlugin from 'vite-plugin-eslint'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/project-vite/",
-  // base: "./",
+  // base: "/project-vite/",
+  base: "./",
   build: {
     outDir: "docs",
     // 设置最终构建的浏览器兼容目标
@@ -28,12 +27,9 @@ export default defineConfig({
     AutoImport({
       imports: [
         "vue",
-        "vue-router",
-        {
-          "naive-ui": ["useDialog", "useMessage", "useNotification", "useLoadingBar"]
-        }
+        "vue-router"
       ],
-      resolvers: [ElementPlusResolver()],
+      resolvers: [],
       // 生成配置文件路径
       dts: "src/auto-imports.d.ts",
       eslintrc: {
@@ -45,7 +41,7 @@ export default defineConfig({
     Components({
       // 需要自动按需引入的文件夹组件
       dirs: ["src/components", "src/layout/components"],
-      resolvers: [ElementPlusResolver(), NaiveUiResolver()],
+      resolvers: [],
       // 生成配置文件路径
       dts: "src/components.d.ts"
     })
@@ -63,7 +59,7 @@ export default defineConfig({
     // 监听所有地址
     host: "0.0.0.0",
     // 服务启动时是否自动打开浏览器
-    open: true,
+    open: false,
     // 允许跨域
     cors: true,
     // 自定义代理规则

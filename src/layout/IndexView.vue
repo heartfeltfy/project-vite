@@ -1,119 +1,22 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
 
+const router = useRouter()
+</script>
 <template>
-  <div class="tiger-layout">
-    <!-- 遮罩层 -->
-    <transition name="overlay">
-      <OverlayView />
-    </transition>
-    <header>
-      <HeaderView :data="{ name: '哈哈ceshi' }" />
-    </header>
-    <!-- 菜单开关 -->
-    <div class="valve">
-      <ValveView />
-    </div>
-    <!-- 坐标菜单滚动 -->
-    <el-scrollbar class="aside">
-      <div class="tiger-aside-scrollbar">
-        <AsideView />
-      </div>
-    </el-scrollbar>
-    <!-- 主内容区 -->
-    <section>
-      <div class="tiger-section">
-        <div class="tiger-section-container">tiger-section-container</div>
-        <div class="tiger-section-wrapper">
-          <nav class="wrapper-content">wrapper-content</nav>
-        </div>
-      </div>
-    </section>
+  <div class="container">
+    <a class="github-logo" href="https://github.com/heartfeltfy" target="_blank" title="github">
+      <i class="github-chenmf">
+        <svg height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" width="1.2em">
+          <path
+            d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476c0-.237-.013-1.024-.013-1.862c-2.512.463-3.162-.612-3.362-1.175c-.113-.288-.6-1.175-1.025-1.413c-.35-.187-.85-.65-.013-.662c.788-.013 1.35.725 1.538 1.025c.9 1.512 2.338 1.087 2.912.825c.088-.65.35-1.087.638-1.337c-2.225-.25-4.55-1.113-4.55-4.938c0-1.088.387-1.987 1.025-2.688c-.1-.25-.45-1.275.1-2.65c0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337c1.912-1.3 2.75-1.024 2.75-1.024c.55 1.375.2 2.4.1 2.65c.637.7 1.025 1.587 1.025 2.687c0 3.838-2.337 4.688-4.562 4.938c.362.312.675.912.675 1.85c0 1.337-.013 2.412-.013 2.75c0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </i>
+    </a>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.tiger-layout {
-  header {
-    height: var(--header-height);
-    border-bottom: 1px solid var(--header-border);
-    padding: 0 12px 0 24px;
-    background: radial-gradient(transparent 1px, var(--bg-color) 1px);
-    background-size: 4px 4px;
-    backdrop-filter: saturate(50%) blur(4px);
-    top: 0;
-    left: 0;
-    position: sticky;
-    box-sizing: border-box;
-  }
+<style scoped>
 
-  .aside {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    padding: 48px 32px 0;
-    width: calc((100vw - var(--screen-max-width)) / 2 + var(--sidebar-width-small));
-    overflow-y: auto;
-    transform: translate(-100%);
-    transition: background-color 0.3s, opacity 0.25s, transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-    background: var(--bg-color);
-    z-index: var(--z-index-sidebar);
-
-    :deep(.el-scrollbar__wrap) {
-      border: 1px solid var(--header-border);
-
-      .tiger-aside-scrollbar {
-        height: 100%;
-        padding-bottom: 5em;
-      }
-    }
-  }
-
-  .valve {
-    display: flex;
-    padding: 0.75em 32px;
-    border: 1px solid var(--header-border);
-    border-top: none;
-  }
-
-  section {
-    .tiger-section {
-      padding: 32px 24px 96px;
-
-      .tiger-section-container {
-        border: 1px solid var(--header-border);
-      }
-
-      .tiger-section-wrapper {
-        padding-left: 64px;
-        display: none;
-
-        .wrapper-content {
-          position: sticky;
-          top: calc(var(--header-height) + 32px);
-          margin-top: 0;
-          padding: 4px 8px 4px 12px;
-          margin-bottom: 32px;
-          width: 200px;
-          border: 1px solid var(--header-border);
-        }
-      }
-    }
-  }
-
-  .overlay-enter-active,
-  .overlay-leave-active {
-    transition: opacity var(--transition-delay) ease;
-  }
-
-  .overlay-enter-from,
-  .overlay-leave-to {
-    opacity: 0;
-  }
-}
-
-/*
-  适配样式引入
- */
-@import "media.scss";
 </style>
