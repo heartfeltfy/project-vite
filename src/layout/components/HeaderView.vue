@@ -1,11 +1,10 @@
-<script lang="ts" setup="">
+<script lang="ts" setup>
 
 </script>
 <template>
-  <div class="h-14">
+  <header class="h-14">
     <p class="text-2xl">header</p>
-    <github-logo />
-  </div>
+  </header>
 </template>
 
 <style scoped>

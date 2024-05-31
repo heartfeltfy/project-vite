@@ -1,11 +1,12 @@
-<script lang="ts" setup="">
-
+<script lang="ts" setup>
+const date = new Date().getFullYear()
 </script>
+
 <template>
-  <div class="footer-wrapper">
-    <p>footer</p>
+  <footer class="flex justify-center items-center gap-1 text-sm">
+    <p>© {{ date }} 小M All Rights Reserved</p>
     <github-logo />
-  </div>
+  </footer>
 </template>
 
 <style scoped>
