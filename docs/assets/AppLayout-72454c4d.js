@@ -1,2 +1,0 @@
-import{_ as n,a}from"./HeaderView-a5620bb8.js";import{d as c,o as _,c as r,a as e,b as m,u as p}from"./index-d8e8b74e.js";const i={class:"min-h-screen flex flex-col"},l=m("main",{class:"flex-auto"},"123",-1),v=c({__name:"AppLayout",setup(u){const o=p();return console.log(o),(f,d)=>{const s=n,t=a;return _(),r("div",i,[e(s),l,e(t)])}}});export{v as default};
-//# sourceMappingURL=AppLayout-72454c4d.js.map
