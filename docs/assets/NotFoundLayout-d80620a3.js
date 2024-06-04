@@ -1,0 +1,2 @@
+import{_ as i,a as m}from"./HeaderView-a5620bb8.js";import{_ as o,o as _,c as e,a as n}from"./index-d8e8b74e.js";const d={},f={class:"text-4xl"};function p(c,t){return _(),e("div",f,"404页面找不到了")}const u=o(d,[["render",p]]),l={},h={class:"min-h-screen"};function x(c,t){const s=i,r=u,a=m;return _(),e("div",h,[n(s),n(r),n(a)])}const g=o(l,[["render",x]]);export{g as default};
+//# sourceMappingURL=NotFoundLayout-d80620a3.js.map
