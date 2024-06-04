@@ -10,6 +10,6 @@ export const base: RouteRecordRaw[] = [
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
-    component: async () => await import("@/views/error/index.vue")
+    component: async () => await import("@/layout/NotFoundLayout.vue")
   }
 ]
